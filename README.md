@@ -1,4 +1,4 @@
-# 경구약제 이미지 인식 AI 프로젝트 
+# 경구약제 이미지 인식 AI 프로젝트
 **코드잇 AI 4기 4팀 - 헬스케어 스타트업 "헬스잇(Health Eat)" AI 엔지니어링 팀**
 
 [![Python](https://img.shields.io/badge/python-v3.8+-blue.svg)](https://www.python.org/downloads/)
