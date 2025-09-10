@@ -26,11 +26,12 @@
 
       // curFiles 포맷에 맞게 변환해서 추가
       curFiles.push({
+        title: page.title || '',
         name: page.name || '',
+        basename: page.basename,
+        extname: page.extname,
+        modified_time: page.modified_time,
         path: page.path || '',
-        extname: extname,
-        modified_time: modified_time,
-        basename: basename,
         url: page.url || ''
       });
     }

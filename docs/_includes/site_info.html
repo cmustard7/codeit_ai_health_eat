@@ -72,11 +72,12 @@ page.categories, page.tags : 카테고리/태그(게시글일 경우
 [
 {%- for f in all_files -%}
   {
+    "title": {{ f.basename | default: "" | jsonify }},
     "name": {{ f.name | default: "" | jsonify }},
-    "path": {{ f.path | default: "" | jsonify }},
+    "basename": {{ f.basename | default: "" | jsonify }},
     "extname": {{ f.extname | default: "" | jsonify }},
     "modified_time": {{ f.modified_time | date: "%Y-%m-%d %H:%M:%S" | default: "" | jsonify }},
-    "basename": {{ f.basename | default: "" | jsonify }},
+    "path": {{ f.path | default: "" | jsonify }},
     "url": {{ f.url | default: "" | jsonify }}
   }{%- unless forloop.last -%},{%- endunless -%}
 {%- endfor -%}
@@ -89,10 +90,13 @@ page.categories, page.tags : 카테고리/태그(게시글일 경우
 {%- assign f_path = "/" | append: p.path -%}
   {
     "title": {{ p.title | default: "" | jsonify }},
+    "name": {{ p.name | default: "" | jsonify }},
+    "basename": {{ p.name | remove: ".md" | default: "" | jsonify }},
+    "extname": {{ ".md" | jsonify }},
+    "modified_time": {{ p.date | date: "%Y-%m-%d 00:00:00" | default: "" | jsonify }},
     "url": {{ p.url | default: "" | jsonify }},
     "path": {{ f_path | default: "" | jsonify }},
     "dir": {{ p.dir | default: "" | jsonify }},
-    "name": {{ p.name | default: "" | jsonify }},
     "layout": {{ p.layout | default: "" | jsonify }},
     "date": {{ p.date | date: "%Y-%m-%d" | default: "" | jsonify }},
     "excerpt": {{ p.excerpt | default: "" | strip_html | truncate: 100 | jsonify }},
