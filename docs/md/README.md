@@ -2,7 +2,8 @@
 layout: default
 title: "codeit AI 4기 4팀 초급 프로젝트"
 description: "codeit AI 4기 4팀 초급 프로젝트 "
-date: 2025-09-07
+date: 2025-09-09
+author: "김명환"
 cache-control: no-cache
 expires: 0
 pragma: no-cache
