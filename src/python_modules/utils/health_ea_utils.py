@@ -1,18 +1,45 @@
 """
 프로젝트 사용에 필요한 유틸리티 함수 및 라이브러리 모음
 
+주요 기능:
+- 경로 관리: drive_root(), get_path_modeling(), get_path_modeling_release()
+- 디렉토리 구조 출력: print_dir_tree(), print_json_tree(), print_git_tree()
+- 모델 저장/로드: save_model_dict(), load_model_dict(), search_pth_files()
+- AI Hub 데이터셋 관리: AIHubShell 클래스 (검색, 다운로드, 압축해제)
+- 압축 파일 처리: unzip()
+- 진행률 표시: get_tqdm_kwargs()
+
+포함된 라이브러리:
+- 머신러닝: scikit-learn (회귀, 분류, 전처리, 평가)
+- 딥러닝: PyTorch (신경망, 최적화, 데이터로더)
+- 데이터 처리: pandas, numpy
+- 시각화: matplotlib, seaborn
+- 이미지 처리: PIL
+- 기타: requests, yaml, tqdm, pathlib
 """
 
 import os
 import sys
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-current_dir = os.path.dirname(os.path.abspath(__file__))
+try:
+    # Colab 환경 여부 확인
+    import google.colab
+    IS_COLAB = True
+except ImportError:
+    IS_COLAB = False
+
+if IS_COLAB:
+    current_dir = "/content/drive/MyDrive/codeit_ai_health_eat/src/python_modules/utils"
+else:
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+
 sys.path.append(current_dir)
 
 from urllib.request import urlretrieve
+
 helper_path = os.path.join(current_dir, "helper_c0z0c_dev.py")
-urlretrieve("https://raw.githubusercontent.com/c0z0c/jupyter_hangul/refs/heads/beta/helper_c0z0c_dev.py", helper_path)
+url = "https://raw.githubusercontent.com/c0z0c/jupyter_hangul/refs/heads/beta/helper_c0z0c_dev.py"
+urlretrieve(url, helper_path)
 
 import importlib
 import helper_c0z0c_dev as helper
@@ -861,6 +888,7 @@ class AIHubShell:
         return result
 
 import zipfile
+from tqdm import tqdm
 def unzip(zipfile_list):
     for zip_path in zipfile_list:
         if os.path.exists(zip_path) and os.path.isfile(zip_path):
@@ -868,13 +896,18 @@ def unzip(zipfile_list):
             if not os.path.exists(extract_dir):
                 os.makedirs(extract_dir, exist_ok=True)
                 with zipfile.ZipFile(zip_path, 'r') as zip_ref:
-                    zip_ref.extractall(extract_dir)
+                    members = zip_ref.namelist()
+                    for member in tqdm(members, desc=f"압축 해제 중: {os.path.basename(zip_path)}", unit="file"):
+                        zip_ref.extract(member, extract_dir)
                 print(f"압축 해제 완료: {extract_dir}")
             else:
                 print(f"이미 압축 해제됨: {extract_dir}")
             try:
                 os.remove(zip_path)
-            except FileNotFoundError:
+            except FileNotFoundError as e:
+                print(f"파일이 없음 {e} : {zip_path}")
                 pass
+        else:
+            print(f"존재하지 않은 파일: {zip_path}")
 
 ################################################################################################################
