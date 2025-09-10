@@ -545,12 +545,12 @@ def test_find_largest_even():
 - 이슈 및 블로커
 
 #### 협업 일지 링크
-- [이건희 협업일지 (Project Manager)](/협업일지/김명환/)
-- [서동일 협업일지 (Data Engineer)](/협업일지/김명환/)
-- [김명환 협업일지 (Model Architect)](/협업일지/김명환/)
-- [김민혁 협업일지 (Experimentation Lead)](/협업일지/김명환/)
-- [이현재 협업일지 (Quality Assurance)](/협업일지/김명환/)
-- [팀 회의록](/회의록/)
+- [이건희 협업일지 (Project Manager)](https://c0z0c.github.io/codeit_ai_health_eat/협업일지/이건희/)
+- [서동일 협업일지 (Data Engineer)](https://c0z0c.github.io/codeit_ai_health_eat/협업일지/서동일/)
+- [김명환 협업일지 (Model Architect)](https://c0z0c.github.io/codeit_ai_health_eat/협업일지/김명환/)
+- [김민혁 협업일지 (Experimentation Lead)](https://c0z0c.github.io/codeit_ai_health_eat/협업일지/김민혁/)
+- [이현재 협업일지 (Quality Assurance)](https://c0z0c.github.io/codeit_ai_health_eat/협업일지/이현재/)
+- [팀 회의록](https://c0z0c.github.io/codeit_ai_health_eat/회의록/)
 
 ## 8. 성능 평가 및 모니터링
 
