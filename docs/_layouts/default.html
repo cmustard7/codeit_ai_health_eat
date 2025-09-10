@@ -274,6 +274,7 @@
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.3);
             border-color: #87ceeb;
+            background: #4a4a4a;
         }
 
         .folder-item {
@@ -293,6 +294,7 @@
 
         .file-info {
             flex: 1;
+            min-width: 0;
         }
 
         .file-name {
@@ -300,6 +302,11 @@
             font-size: 1em;
             color: #87ceeb;
             font-weight: 600;
+        }
+
+        .file-name a:hover {
+            color: #a0d4f0;
+            text-decoration: underline;
         }
 
         .file-type {
@@ -694,51 +701,6 @@
             border-color: #87ceeb;
         }
 
-        .file-grid {
-            display: grid;
-            gap: 0.5rem;
-        }
-
-        .file-item {
-            display: flex;
-            align-items: center;
-            padding: 0.75rem;
-            border: 1px solid #555;
-            border-radius: 6px;
-            background: #404040;
-            transition: background-color 0.2s, border-color 0.2s;
-        }
-
-        .file-item:hover {
-            background: #4a4a4a;
-            border-color: #87ceeb;
-        }
-
-        .file-icon {
-            font-size: 1.5rem;
-            margin-right: 0.75rem;
-        }
-
-        .file-info {
-            flex: 1;
-            min-width: 0;
-        }
-
-        .file-name {
-            font-weight: 500;
-            margin-bottom: 0.25rem;
-        }
-
-        .file-name a {
-            text-decoration: none;
-            color: #87ceeb;
-        }
-
-        .file-name a:hover {
-            color: #a0d4f0;
-            text-decoration: underline;
-        }
-
         .file-ext {
             color: #b0b0b0;
             font-size: 0.9rem;
@@ -748,11 +710,6 @@
         .file-date {
             font-size: 0.8rem;
             color: #888;
-        }
-
-        .file-actions {
-            display: flex;
-            gap: 0.5rem;
         }
 
         .colab-btn,
