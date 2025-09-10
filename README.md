@@ -38,10 +38,10 @@ graph LR
 
 ```mermaid
 graph TD
-    PM["ㅇㅇㅇ<br/>Project Manager"] --> DE["ㅇㅇㅇ<br/>Data Engineer"]
-    PM --> MA["ㅇㅇㅇ<br/>Model Architect"]
-    PM --> EL["ㅇㅇㅇ<br/>Experimentation Lead"]
-    PM --> QA["ㅇㅇㅇ<br/>Quality Assurance"]
+    PM["이건희<br/>Project Manager"] --> DE["서동일<br/>Data Engineer"]
+    PM --> MA["김명환<br/>Model Architect"]
+    PM --> EL["김민혁<br/>Experimentation Lead"]
+    PM --> QA["이현재<br/>Quality Assurance"]
     
     DE --> DE1["EDA 및 데이터 분석"]
     DE --> DE2["전처리 파이프라인"]
@@ -60,11 +60,11 @@ graph TD
 
 | 역할 | 담당자 | 핵심 업무 | 주간별 포커스 |
 |------|--------|-----------|---------------|
-| **Project Manager** | ㅇㅇㅇ | 프로젝트 총괄 관리, 일정 조율 | 전 주차: 팀 조율, 진행상황 체크 |
-| **Data Engineer** | ㅇㅇㅇ | EDA, 데이터 전처리, 증강 기법 | 1주차: EDA 완료, 2주차: 파이프라인 구축 |
-| **Model Architect** | ㅇㅇㅇ | YOLO v8 + EfficientNet-B3 설계 | 1-2주차: 모델 구현, 3주차: 최적화 |
-| **Experimentation Lead** | ㅇㅇㅇ | 실험 설계, Kaggle 제출, 성능 튜닝 | 2주차: 실험 시작, 3주차: 최종 튜닝 |
-| **Quality Assurance** | ㅇㅇㅇ | 코드 품질, 문서화, 결과 검증 | 전 주차: 지속적 품질 관리 |
+| **Project Manager** | 이건희 | 프로젝트 총괄 관리, 일정 조율 | 전 주차: 팀 조율, 진행상황 체크 |
+| **Data Engineer** | 서동일 | EDA, 데이터 전처리, 증강 기법 | 1주차: EDA 완료, 2주차: 파이프라인 구축 |
+| **Model Architect** | 김명환 | YOLO v8 + EfficientNet-B3 설계 | 1-2주차: 모델 구현, 3주차: 최적화 |
+| **Experimentation Lead** | 김민혁 | 실험 설계, Kaggle 제출, 성능 튜닝 | 2주차: 실험 시작, 3주차: 최종 튜닝 |
+| **Quality Assurance** | 이현재 | 코드 품질, 문서화, 결과 검증 | 전 주차: 지속적 품질 관리 |
 
 ## 3. 기술 아키텍처
 
@@ -262,30 +262,32 @@ gantt
 
 ### 4.2. 주차별 상세 계획
 
-#### 1주차 (9/9 ~ 9/13): 기반 구축
+#### 1주차 (9/8 ~ 9/12): 기반 구축
 | 날짜 | 주 담당자 | 핵심 업무 | 예상 산출물 |
 |------|-----------|-----------|-------------|
-| **9/9 (월)** | ㅇㅇㅇ | 프로젝트 킥오프, 역할 분담 확정 | 역할분담표, GitHub 세팅 |
-| **9/10 (화)** | ㅇㅇㅇ | 데이터 EDA, 분포 분석 | EDA 노트북, 데이터 품질 리포트 |
-| **9/11 (수)** | ㅇㅇㅇ | 전처리 파이프라인 구축 | preprocessing.py, augmentation.py |
-| **9/12 (목)** | ㅇㅇㅇ | YOLO v8 환경 구축, 베이스라인 | yolo_detector.py 초기 버전 |
-| **9/13 (금)** | 전원 | 1주차 결과 공유, 2주차 계획 수립 | 주간 회의록, 다음주 계획 |
+| **9/8 (월)** | | | |
+| **9/9 (화)** | 이건희| 프로젝트 킥오프, 역할 분담 확정 | 역할분담표, GitHub 세팅 |
+| **9/10 (수)** | 서동일 | 데이터 EDA, 분포 분석 | EDA 노트북, 데이터 품질 리포트 |
+| **9/11 (목)** | 이건희 | 전처리 파이프라인 구축 | preprocessing.py, augmentation.py |
+| **9/12 (금)** | 이건희 | YOLO v8 환경 구축, 베이스라인 | yolo_detector.py 초기 버전 |
 
-#### 2주차 (9/16 ~ 9/20): 모델 구현 및 통합
+#### 2주차 (9/15 ~ 9/19): 모델 구현 및 통합
 | 날짜 | 주 담당자 | 핵심 업무 | 예상 산출물 |
 |------|-----------|-----------|-------------|
-| **9/16 (월)** | ㅇㅇㅇ | YOLO v8 본격 학습 시작 | 학습 스크립트, 첫 번째 체크포인트 |
-| **9/17 (화)** | ㅇㅇㅇ | EfficientNet-B3 구현 및 학습 | efficientnet_classifier.py |
-| **9/18 (수)** | ㅇㅇㅇ | 두 모델 통합, 파이프라인 구축 | inference_pipeline.py |
-| **9/19 (목)** | ㅇㅇㅇ | 성능 평가, 첫 실험 결과 | 성능 리포트, 실험 로그 |
-| **9/20 (금)** | ㅇㅇㅇ | **첫 Kaggle 제출** | submission_v1.csv, 제출 결과 |
+| **9/15 (월)** | 전원 | 1주차 결과 공유, 2주차 계획 수립 | 주간 회의록, 다음주 계획 |
+| **9/16 (화)** | ㅇㅇㅇ | YOLO v8 본격 학습 시작 | 학습 스크립트, 첫 번째 체크포인트 |
+| **9/17 (수)** | ㅇㅇㅇ | **중간발표** EfficientNet-B3 구현 및 학습 | efficientnet_classifier.py |
+| **9/18 (목)** | ㅇㅇㅇ | 두 모델 통합, 파이프라인 구축 | inference_pipeline.py |
+| **9/19 (금)** | ㅇㅇㅇ | 성능 평가, 첫 실험 결과 | 성능 리포트, 실험 로그 |
 
-#### 3주차 (9/23 ~ 9/25): 최적화 및 마무리
+#### 3주차 (9/22 ~ 9/26): 최적화 및 마무리
 | 날짜 | 주 담당자 | 핵심 업무 | 예상 산출물 |
 |------|-----------|-----------|-------------|
-| **9/23 (월)** | ㅇㅇㅇ | 하이퍼파라미터 튜닝, 앙상블 시도 | 튜닝 결과, 성능 개선 리포트 |
-| **9/24 (화)** | ㅇㅇㅇ | 최종 코드 검증, 문서화 완료 | 최종 README, 코드 리뷰 완료 |
-| **9/25 (수)** | 전원 | **최종 발표** | 발표자료, 최종 보고서 |
+| **9/22 (월)** | ㅇㅇㅇ | **첫 Kaggle 제출** | submission_v1.csv, 제출 결과 |
+| **9/23 (화)** | ㅇㅇㅇ | 하이퍼파라미터 튜닝, 앙상블 시도 | 튜닝 결과, 성능 개선 리포트 |
+| **9/24 (수)** | ㅇㅇㅇ | 최종 코드 검증, 문서화 완료 | 최종 README, 코드 리뷰 완료 |
+| **9/25 (목)** | 전원 | **최종 발표** | 발표자료, 최종 보고서 |
+| **9/26 (금)** | | | |
 
 ### 4.3. Kaggle 제출 전략
 
@@ -543,12 +545,12 @@ def test_find_largest_even():
 - 이슈 및 블로커
 
 #### 협업 일지 링크
-- [ㅇㅇㅇ 협업일지 (Project Manager)](collaboration-logs/lee-gunhee-pm-log.md)
-- [ㅇㅇㅇ 협업일지 (Data Engineer)](collaboration-logs/kim-myeonghwan-de-log.md)  
-- [ㅇㅇㅇ 협업일지 (Model Architect)](collaboration-logs/kim-minhyuk-ma-log.md)
-- [ㅇㅇㅇ 협업일지 (Experimentation Lead)](collaboration-logs/seo-dongil-el-log.md)
-- [ㅇㅇㅇ 협업일지 (Quality Assurance)](collaboration-logs/lee-hyeonjae-qa-log.md)
-- [팀 회의록](collaboration-logs/team4-meetings.md)
+- [이건희 협업일지 (Project Manager)](/협업일지/김명환/)
+- [서동일 협업일지 (Data Engineer)](/협업일지/김명환/)
+- [김명환 협업일지 (Model Architect)](/협업일지/김명환/)
+- [김민혁 협업일지 (Experimentation Lead)](/협업일지/김명환/)
+- [이현재 협업일지 (Quality Assurance)](/협업일지/김명환/)
+- [팀 회의록](/회의록/)
 
 ## 8. 성능 평가 및 모니터링
 
@@ -690,11 +692,11 @@ tracking_metrics:
 - 발표 역할 분담 및 리허설 완료
 
 **개인별 협업 일지**
-- ㅇㅇㅇ: PM 협업 일지
-- ㅇㅇㅇ: Data Engineer 협업 일지
-- ㅇㅇㅇ: Model Architect 협업 일지
-- ㅇㅇㅇ: Experimentation Lead 협업 일지
-- ㅇㅇㅇ: Quality Assurance 협업 일지
+- 이건희: PM 협업 일지
+- 서동일: Data Engineer 협업 일지
+- 김명환: Model Architect 협업 일지
+- 김민혁: Experimentation Lead 협업 일지
+- 이현재: Quality Assurance 협업 일지
 
 ### 9.2. 발표 구성안
 
@@ -716,32 +718,32 @@ gantt
 ```
 
 #### 발표 슬라이드 구성
-**1. 오프닝 (2분) - ㅇㅇㅇ**
+**1. 오프닝 (2분) - 이건희**
 - 팀 소개 및 역할 분담
 - 프로젝트 개요
 
-**2. 문제 정의 및 접근 방법 (2분) - ㅇㅇㅇ**  
+**2. 문제 정의 및 접근 방법 (2분) - 서동일**  
 - 헬스케어 AI의 필요성
 - 기술적 도전 과제
 - 우리의 해결 접근법
 
-**3. 기술 아키텍처 (4분) - ㅇㅇㅇ**
+**3. 기술 아키텍처 (4분) - 김명환**
 - YOLO v8 + EfficientNet-B3 파이프라인
 - 모델 선택 이유 및 최적화 과정
 - 시스템 구조도
 
-**4. 실험 과정 및 결과 (7분) - ㅇㅇㅇ**
+**4. 실험 과정 및 결과 (7분) - 김민혁**
 - 데이터 분석 및 전처리
 - 모델 학습 과정
 - 성능 개선 과정
 - Kaggle 제출 결과
 
-**5. 시연 및 데모 (5분) - ㅇㅇㅇ**
+**5. 시연 및 데모 (5분) - 이현재**
 - 실제 이미지 처리 과정 시연
 - 결과 해석 및 헬스케어 정보 제공
 - 시스템 안정성 검증
 
-**6. 결론 및 향후 계획 (3분) - ㅇㅇㅇ**
+**6. 결론 및 향후 계획 (3분) - 이건희**
 - 프로젝트 성과 요약
 - 기술적 기여점
 - 한계점 및 개선 방안
