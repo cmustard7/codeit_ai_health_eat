@@ -929,16 +929,19 @@
         {% include site_info.html %}
     </script>
 
+
 </head>
 <body>
     <div class="main-wrapper">
         <div class="container">
             <div class="nav-bar">
                 <a href="{{ site.baseurl }}/">🏠 홈</a>
-                <a href="https://github.com/c0z0c/codeit_ai_health_eat/blob/alpha/docs/md/README.md" target="_blank">📖 README</a>
+                <span id="readme-link"></span>
+                <script>
+                document.getElementById('readme-link').innerHTML =
+                    `<a href="https://github.com/c0z0c/codeit_ai_health_eat/blob/${branch}/docs/md/README.md" target="_blank">📖 README</a>`;
+                </script>    
                 <a href="https://github.com/c0z0c/codeit_ai_health_eat" target="_blank">💾 코드 저장소</a>
-
-
                 <!-- <a href="{{ site.baseurl }}/reports/">🧪 테스트 리포트</a> -->
             </div>
             {{ content }}
